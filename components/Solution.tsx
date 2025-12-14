@@ -26,10 +26,10 @@ export const Solution: React.FC = () => {
              <div className="absolute -inset-4 bg-holiday-gold/20 rounded-full blur-xl"></div>
              
              <div className="grid grid-cols-2 gap-3 relative">
-                {/* Imagem 1: Panetone de Chocolate */}
+                {/* Imagem 1: Panetone de Chocolate/Brigadeiro */}
                 <div className="relative group overflow-hidden rounded-xl shadow-lg border-2 border-white aspect-square">
                    <img 
-                    src="https://images.unsplash.com/photo-1606913084603-3e7702b01627?auto=format&fit=crop&w=600&q=80" 
+                    src="https://dw0jruhdg6fis.cloudfront.net/producao/30445597/G/panetone_brigadeiro.jpg" 
                     alt="Panetone de Chocolate Trufado" 
                     className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
                   />
@@ -38,22 +38,22 @@ export const Solution: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Imagem 2: Panetone Tradicional */}
+                {/* Imagem 2: Panetone Tradicional/Corte */}
                 <div className="relative group overflow-hidden rounded-xl shadow-lg border-2 border-white aspect-square">
                   <img 
-                    src="https://images.unsplash.com/photo-1609172466030-038222d8616c?auto=format&fit=crop&w=600&q=80" 
+                    src="https://funchal.vtexassets.com/arquivos/ids/245839-650-auto/foto_1_003.jpg?v=638439911172900000" 
                     alt="Panetone Tradicional de Frutas" 
                     className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
-                    <p className="text-white text-xs font-bold text-center">Clássico de Frutas</p>
+                    <p className="text-white text-xs font-bold text-center">Massa Perfeita</p>
                   </div>
                 </div>
 
                 {/* Imagem 3: Panetone de Pistache */}
                 <div className="relative group overflow-hidden rounded-xl shadow-lg border-2 border-white aspect-square">
                    <img 
-                    src="https://images.unsplash.com/photo-1627044037568-15d2a938c4c7?auto=format&fit=crop&w=600&q=80" 
+                    src="https://offloadmedia.feverup.com/saopaulosecreto.com/wp-content/uploads/2023/12/12143019/FLAKES_-PISTACCHIOTONE-1KG_SA-FOTOGRAFIA-94-Copia.jpg" 
                     alt="Panetone de Pistache" 
                     className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
                   />
@@ -62,15 +62,15 @@ export const Solution: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Imagem 4: Panetone com Morango */}
+                {/* Imagem 4: Panetone Recheado/Gourmet */}
                 <div className="relative group overflow-hidden rounded-xl shadow-lg border-2 border-white aspect-square">
                    <img 
-                    src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" 
-                    alt="Panetone com Morango" 
+                    src="https://i.ytimg.com/vi/-BI7XPAD_5w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBsOxsyejauuCtm-dFjWWmovNBHPQ" 
+                    alt="Panetone Super Recheado" 
                     className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
-                    <p className="text-white text-xs font-bold text-center">Ninho com Morango</p>
+                    <p className="text-white text-xs font-bold text-center">Super Recheados</p>
                   </div>
                 </div>
              </div>

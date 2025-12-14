@@ -3,6 +3,10 @@ import { Button } from './Button';
 import { Timer, ArrowRight, CreditCard } from 'lucide-react';
 
 export const Offer: React.FC = () => {
+  const handleCheckout = () => {
+    window.location.href = 'https://pay.kiwify.com.br/X065UOQ';
+  };
+
   return (
     <section id="offer" className="py-20 bg-gradient-to-b from-white to-holiday-cream">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -18,16 +22,21 @@ export const Offer: React.FC = () => {
             
             <div className="flex flex-col items-center justify-center gap-2 mb-8">
               <span className="text-gray-400 line-through text-xl">De R$ 97,00</span>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col items-center">
                 <span className="text-gray-600 text-2xl font-bold">Por apenas</span>
-                <span className="text-5xl md:text-7xl font-bold text-holiday-green">R$ 19,90</span>
+                <span className="text-5xl md:text-7xl font-bold text-holiday-green">R$ 17,90</span>
               </div>
               <span className="text-sm text-holiday-red font-semibold bg-red-50 px-3 py-1 rounded-full">
                  Pagamento Único sem juros
               </span>
             </div>
 
-            <Button fullWidth={true} pulse={true} className="md:max-w-md mx-auto mb-6 text-xl md:text-2xl py-6">
+            <Button 
+              onClick={handleCheckout}
+              fullWidth={true} 
+              pulse={true} 
+              className="md:max-w-md mx-auto mb-6 text-xl md:text-2xl py-6"
+            >
               QUERO APRENDER AGORA! <ArrowRight className="inline-block ml-2 w-6 h-6" />
             </Button>
             

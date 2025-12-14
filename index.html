@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panetones de Sucesso - Receitas Lucrativas</title>
+    <meta name="description" content="Uma página de vendas elegante e de alta conversão para um curso de Panetones Artesanais.">
+    
+    <!-- Performance Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <!-- Preload Hero Background Image para melhorar LCP -->
+    <link rel="preload" as="image" href="https://picsum.photos/id/431/1920/1080">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Configuration -->
     <script>
       tailwind.config = {
         theme: {
@@ -27,21 +42,612 @@
         }
       }
     </script>
+    
     <style>
       html { scroll-behavior: smooth; }
+      
+      /* Animações Customizadas */
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes fade-out-down {
+        from { opacity: 1; transform: translateY(0); }
+        to { opacity: 0; transform: translateY(20px); }
+      }
+
+      .toast-enter { animation: fade-in-up 0.5s forwards; }
+      .toast-exit { animation: fade-out-down 0.5s forwards; }
     </style>
-  <script type="importmap">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1361321204835075');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+<script type="importmap">
 {
   "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
     "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
   }
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<body class="font-sans antialiased text-gray-900 bg-white selection:bg-holiday-red selection:text-white">
+
+    <!-- Pixel Noscript -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1361321204835075&ev=PageView&noscript=1"
+    /></noscript>
+
+    <!-- Countdown Bar -->
+    <div class="sticky top-0 z-[60] bg-holiday-dark text-white py-3 px-4 shadow-md border-b-2 border-holiday-gold">
+        <div class="container mx-auto flex items-center justify-center gap-3 text-sm md:text-base font-medium">
+            <i data-lucide="clock" class="w-5 h-5 text-holiday-gold animate-pulse"></i>
+            <p class="text-center">
+                Essa oferta é válida apenas em: 
+                <span id="countdown-timer" class="ml-2 font-mono font-bold text-holiday-gold text-lg tracking-wider">
+                    23:49
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-holiday-green text-white overflow-hidden pb-12 pt-8 md:pt-16">
+            <!-- Background Overlay -->
+            <div class="absolute inset-0 opacity-20 bg-[url('https://picsum.photos/id/431/1920/1080')] bg-cover bg-center mix-blend-overlay"></div>
+            
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <div class="inline-flex items-center gap-2 bg-holiday-red/20 border border-holiday-gold/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm">
+                    <i data-lucide="star" class="w-4 h-4 text-holiday-gold fill-current"></i>
+                    <span class="text-sm font-medium text-holiday-cream">Método 100% Comprovado</span>
+                </div>
+
+                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-holiday-cream drop-shadow-md">
+                    Faça Panetones <span class="text-holiday-gold">Profissionais</span> na Sua Cozinha Ainda Hoje
+                </h1>
+
+                <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto font-sans font-light text-gray-100">
+                    Mesmo que você nunca tenha feito pão na vida. Lucre neste Natal ou encante sua família com receitas fáceis, rápidas e irresistíveis.
+                </p>
+
+                <div class="flex flex-col items-center gap-4">
+                    <button onclick="scrollToOffer()" class="bg-holiday-red text-white border-2 border-holiday-red hover:bg-red-700 font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-95 text-lg md:text-xl uppercase tracking-wide animate-bounce shadow-holiday-gold/20 shadow-xl">
+                        Quero Começar Agora!
+                    </button>
+                    <p class="text-sm opacity-80 mt-2">✨ Acesso imediato e vitalício</p>
+                </div>
+
+                <!-- Feature Pills -->
+                <div class="flex flex-wrap justify-center gap-4 mt-12 text-sm md:text-base">
+                    <div class="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-holiday-gold"></i>
+                        <span>Sem equipamentos caros</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-holiday-gold"></i>
+                        <span>Passo a passo em vídeo</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 backdrop-blur-sm">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-holiday-gold"></i>
+                        <span>+50 Receitas Gourmet</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Empathy Section -->
+        <section class="py-16 bg-holiday-cream">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-center text-holiday-green mb-10">
+                    Você já se sentiu assim?
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-10">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-red-400">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Cansou de levar a mesma coisa em todo Natal e deseja surpreender a sua família, mas não sabe como?</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-red-400">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Tem medo de gastar ingredientes caros e a massa solar ou ficar seca?</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-red-400">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Acha que precisa de uma batedeira planetária profissional para começar?</p>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-red-400">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Gostaria de uma renda extra no fim de ano, mas sente que "não leva jeito" para vendas?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-holiday-gold/30">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            <strong class="text-holiday-green text-xl">Nós te entendemos.</strong>
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            Muitas mulheres deixam de lucrar ou de criar memórias incríveis com a família porque acham que panetone é um "bicho de sete cabeças".
+                        </p>
+                        <p class="text-gray-800 font-semibold italic">
+                            Mas a verdade é que, com a técnica certa, é mais fácil do que fazer um bolo de cenoura. E nós vamos te provar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="scrollToOffer()" class="bg-holiday-green text-white border-2 border-holiday-green hover:bg-emerald-900 font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-95 text-lg md:text-xl uppercase tracking-wide">
+                        Quero Começar Agora!
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="text-holiday-red font-bold tracking-widest uppercase text-sm">Apresentamos</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-holiday-dark mt-2">
+                        Curso Panetones de Sucesso
+                    </h2>
+                    <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+                        O guia definitivo com vídeo-aulas e apostilas para você dominar a arte do panetone artesanal, do clássico ao gourmet.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                    <!-- Image Grid -->
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-holiday-gold/20 rounded-full blur-xl"></div>
+                        
+                        <div class="grid grid-cols-2 gap-3 relative">
+                            <!-- Imagem 1: Chocolate/Brigadeiro -->
+                            <div class="relative group overflow-hidden rounded-xl shadow-lg border-2 border-white aspect-square">
+                                <img 
+                                    src="https://dw0jruhdg6fis.cloudfront.net/producao/30445597/G/panetone_brigadeiro.jpg" 
+                                    alt="Panetone de Chocolate Trufado" 
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-white text-xs font-bold text-center">Chocolate Trufado</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Imagem 2: Tradicional -->
+                            <div class="relative group overflow-hidden rounded-xl shadow-lg border-2 border-white aspect-square">
+                                <img 
+                                    src="https://funchal.vtexassets.com/arquivos/ids/245839-650-auto/foto_1_003.jpg?v=638439911172900000" 
+                                    alt="Panetone Tradicional de Frutas" 
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-white text-xs font-bold text-center">Massa Perfeita</p>
+                                </div>
+                            </div>
+
+                            <!-- Imagem 3: Pistache -->
+                            <div class="relative group overflow-hidden rounded-xl shadow-lg border-2 border-white aspect-square">
+                                <img 
+                                    src="https://offloadmedia.feverup.com/saopaulosecreto.com/wp-content/uploads/2023/12/12143019/FLAKES_-PISTACCHIOTONE-1KG_SA-FOTOGRAFIA-94-Copia.jpg" 
+                                    alt="Panetone de Pistache" 
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-white text-xs font-bold text-center">Pistache Gourmet</p>
+                                </div>
+                            </div>
+
+                            <!-- Imagem 4: Recheado -->
+                            <div class="relative group overflow-hidden rounded-xl shadow-lg border-2 border-white aspect-square">
+                                <img 
+                                    src="https://i.ytimg.com/vi/-BI7XPAD_5w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBsOxsyejauuCtm-dFjWWmovNBHPQ" 
+                                    alt="Panetone Super Recheado" 
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-white text-xs font-bold text-center">Super Recheados</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-holiday-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="video" class="w-6 h-6 text-holiday-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-holiday-dark mb-2">Vídeo Aula Completa: A Base Perfeita</h3>
+                                <p class="text-gray-600">Aprenda o ponto exato da massa, como sovar sem cansar e o segredo da fermentação para aquele panetone que desfia.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-holiday-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="book-open" class="w-6 h-6 text-holiday-green"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-holiday-dark mb-2">+50 Receitas Tradicionais e Gourmet</h3>
+                                <p class="text-gray-600">
+                                    Do clássico de frutas ao <strong>Pistache, Oreo, Ninho com Nutella, Red Velvet</strong> e muito mais. Sabores que vendem sozinhos!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-holiday-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="smartphone" class="w-6 h-6 text-holiday-gold"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-holiday-dark mb-2">100% Online e Flexível</h3>
+                                <p class="text-gray-600">Assista do seu celular, tablet ou computador. Pause, volte e assista quantas vezes quiser. Acesso Vitalício.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="award" class="w-6 h-6 text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-holiday-dark mb-2">Didática Simples</h3>
+                                <p class="text-gray-600">Tudo explicado tim-tim por tim-tim. Ideal para iniciantes totais.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-6">
+                            <button onclick="scrollToOffer()" class="bg-holiday-red text-white border-2 border-holiday-red hover:bg-red-700 font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-95 text-lg md:text-xl uppercase tracking-wide w-full md:w-auto text-center justify-center inline-flex items-center">
+                                Quero Começar Agora! <i data-lucide="arrow-right" class="inline-block ml-2 w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-16 bg-holiday-cream/50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-center text-holiday-dark mb-12">
+                    Por que este curso é para você?
+                </h2>
+                
+                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center flex flex-col items-center">
+                        <div class="mb-4 bg-gray-50 p-3 rounded-full">
+                            <i data-lucide="clock" class="w-8 h-8 text-holiday-red"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-holiday-dark">Faça Ainda Hoje</h3>
+                        <p class="text-sm text-gray-600">Receitas rápidas que não precisam de 3 dias de fermentação.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center flex flex-col items-center">
+                        <div class="mb-4 bg-gray-50 p-3 rounded-full">
+                             <i data-lucide="shield-check" class="w-8 h-8 text-holiday-green"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-holiday-dark">Receita à Prova de Erros</h3>
+                        <p class="text-sm text-gray-600">Medidas exatas para sua massa crescer e ficar fofinha sempre.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center flex flex-col items-center">
+                        <div class="mb-4 bg-gray-50 p-3 rounded-full">
+                             <i data-lucide="trending-up" class="w-8 h-8 text-holiday-gold"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-holiday-dark">Lucre Muito</h3>
+                        <p class="text-sm text-gray-600">Aprenda a precificar e fazer embalagens que valorizam seu produto em 3x.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center flex flex-col items-center">
+                        <div class="mb-4 bg-gray-50 p-3 rounded-full">
+                             <i data-lucide="gift" class="w-8 h-8 text-purple-500"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-holiday-dark">Presenteie com Amor</h3>
+                        <p class="text-sm text-gray-600">Nada supera o carinho de um presente feito pelas suas mãos.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center flex flex-col items-center">
+                        <div class="mb-4 bg-gray-50 p-3 rounded-full">
+                             <i data-lucide="heart" class="w-8 h-8 text-pink-500"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-holiday-dark">Encante a Família</h3>
+                        <p class="text-sm text-gray-600">Seja a estrela da ceia de Natal com elogios de todos.</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="scrollToOffer()" class="bg-holiday-red text-white border-2 border-holiday-red hover:bg-red-700 font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-95 text-lg md:text-xl uppercase tracking-wide animate-bounce">
+                        Quero Começar Agora!
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-holiday-green text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-center mb-16">
+                    Quem faz, recomenda!
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <!-- Review 1 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 relative">
+                        <i data-lucide="quote" class="absolute top-4 right-4 w-8 h-8 text-holiday-gold opacity-50"></i>
+                        <div class="mb-4">
+                            <span class="bg-holiday-gold text-holiday-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">
+                                Vendi tudo!
+                            </span>
+                        </div>
+                        <p class="text-gray-100 italic mb-6 text-lg">"Eu achava que panetone era coisa de padaria grande. Com a receita da aula, fiz meus primeiros 5 chocotones e vendi todos no trabalho do meu marido. Já tenho 12 encomendas pra semana que vem!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-holiday-red to-orange-500 flex items-center justify-center font-bold text-white">
+                                M
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-holiday-cream">Maria Helena</h4>
+                                <p class="text-xs text-gray-300">52 anos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 relative">
+                        <i data-lucide="quote" class="absolute top-4 right-4 w-8 h-8 text-holiday-gold opacity-50"></i>
+                        <div class="mb-4">
+                            <span class="bg-holiday-gold text-holiday-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">
+                                Economizei e emocionei
+                            </span>
+                        </div>
+                        <p class="text-gray-100 italic mb-6 text-lg">"Nunca tive muito jeito na cozinha, mas queria economizar nos presentes. Fiz os mini-panetones gourmet e coloquei numa caixinha bonita. Minhas irmãs choraram de emoção. Valeu cada centavo."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-holiday-red to-orange-500 flex items-center justify-center font-bold text-white">
+                                A
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-holiday-cream">Ana Cláudia</h4>
+                                <p class="text-xs text-gray-300">45 anos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 relative">
+                        <i data-lucide="quote" class="absolute top-4 right-4 w-8 h-8 text-holiday-gold opacity-50"></i>
+                        <div class="mb-4">
+                            <span class="bg-holiday-gold text-holiday-dark text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">
+                                Renda extra real
+                            </span>
+                        </div>
+                        <p class="text-gray-100 italic mb-6 text-lg">"Minha aposentadoria estava curta e resolvi arriscar. O curso é muito claro, a professora explica com calma. Fiz R$ 800,00 só na primeira semana de dezembro. Estou muito feliz!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-holiday-red to-orange-500 flex items-center justify-center font-bold text-white">
+                                L
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-holiday-cream">Lúcia Ferreira</h4>
+                                <p class="text-xs text-gray-300">60 anos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                     <button onclick="scrollToOffer()" class="bg-holiday-red text-white border-2 border-holiday-red hover:bg-red-700 font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-95 text-lg md:text-xl uppercase tracking-wide shadow-xl border-white">
+                        Quero Começar Agora!
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offer Section -->
+        <section id="offer" class="py-20 bg-gradient-to-b from-white to-holiday-cream">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-holiday-gold">
+                    <div class="bg-holiday-red text-white py-4 px-6 text-center font-bold uppercase tracking-widest text-sm md:text-base flex justify-center items-center gap-2">
+                        <i data-lucide="timer" class="w-5 h-5 animate-pulse"></i>
+                        Oferta Válida Somente Hoje
+                    </div>
+                    
+                    <div class="p-8 md:p-12 text-center">
+                        <h3 class="text-2xl md:text-3xl text-gray-600 mb-2">Leve todo o pacote:</h3>
+                        <p class="text-gray-500 text-sm mb-6">Vídeo Aulas + Apostila 50 Receitas + Acesso Vitalício</p>
+                        
+                        <div class="flex flex-col items-center justify-center gap-2 mb-8">
+                            <span class="text-gray-400 line-through text-xl">De R$ 97,00</span>
+                            <!-- Preço Alinhado Centralizado -->
+                            <div class="flex flex-col items-center">
+                                <span class="text-gray-600 text-2xl font-bold">Por apenas</span>
+                                <span class="text-5xl md:text-7xl font-bold text-holiday-green">R$ 17,90</span>
+                            </div>
+                            <span class="text-sm text-holiday-red font-semibold bg-red-50 px-3 py-1 rounded-full">
+                                 Pagamento Único sem juros
+                            </span>
+                        </div>
+
+                        <a 
+                            href="https://pay.kiwify.com.br/X065UOQ"
+                            class="inline-flex items-center justify-center bg-holiday-red text-white border-2 border-holiday-red hover:bg-red-700 font-bold py-6 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-95 text-xl md:text-2xl uppercase tracking-wide w-full md:max-w-md mx-auto mb-6 animate-bounce"
+                        >
+                            QUERO APRENDER AGORA! <i data-lucide="arrow-right" class="inline-block ml-2 w-6 h-6"></i>
+                        </a>
+                        
+                        <div class="flex items-center justify-center gap-4 text-xs text-gray-500 mb-6">
+                            <span class="flex items-center gap-1"><i data-lucide="credit-card" class="w-3 h-3"></i> Compra Segura</span>
+                            <span class="flex items-center gap-1">💳 Acesso Imediato</span>
+                        </div>
+
+                        <p class="text-gray-500 text-sm max-w-lg mx-auto">
+                            Ao clicar no botão, você será redirecionada para nossa plataforma de pagamento 100% segura. O acesso chega no seu e-mail em minutos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantee Section -->
+        <section class="py-12 bg-white border-t border-gray-100">
+            <div class="container mx-auto px-4 max-w-3xl text-center">
+                <div class="inline-block p-4 bg-holiday-green/10 rounded-full mb-6">
+                    <i data-lucide="shield" class="w-12 h-12 text-holiday-green"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-serif text-holiday-dark mb-4">Garantia Incondicional de 7 Dias</h3>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    O risco é todo nosso. Inscreva-se, assista às aulas e teste as receitas. Se por qualquer motivo você achar que não é para você, basta nos enviar um e-mail que devolvemos 100% do seu dinheiro. Sem perguntas e sem letras miúdas.
+                </p>
+                
+                <button onclick="scrollToOffer()" class="bg-holiday-green text-white border-2 border-holiday-green hover:bg-emerald-900 font-bold py-4 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-95 text-lg md:text-xl uppercase tracking-wide">
+                    Quero Começar Agora!
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-holiday-dark text-gray-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p class="mb-2">&copy; <span id="year"></span> Panetones de Sucesso. Todos os direitos reservados.</p>
+            <p>Este site não faz parte do site do Facebook ou Facebook Inc.</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-white transition-colors">Políticas de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Social Proof Toast -->
+    <div id="social-proof-toast" class="fixed top-20 right-4 z-50 w-[calc(100%-2rem)] md:w-80 transform transition-all duration-500 ease-in-out hidden">
+        <div class="bg-white rounded-lg shadow-xl border-l-4 border-holiday-green p-4 flex items-center gap-4">
+            <div class="bg-green-100 p-2 rounded-full flex-shrink-0">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-600"></i>
+            </div>
+            <div>
+                <p class="text-sm font-bold text-gray-800">
+                    <span id="buyer-name">Nome</span> <span class="font-normal text-gray-500">de <span id="buyer-location">Local</span></span>
+                </p>
+                <p class="text-xs text-holiday-red font-semibold flex items-center gap-1 mt-1">
+                    <i data-lucide="shopping-bag" class="w-3 h-3"></i>
+                    Acabou de comprar o curso
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lucide Icons (Deferred for performance) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+
+        // Ano do rodapé
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll suave
+        function scrollToOffer() {
+            document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Lógica do Timer (Countdown)
+        const countdownEl = document.getElementById('countdown-timer');
+        let timeLeft = (23 * 60) + 49; // 23 minutos e 49 segundos
+
+        const formatTime = (seconds) => {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        };
+
+        const timerInterval = setInterval(() => {
+            timeLeft--;
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                timeLeft = 0;
+            }
+            countdownEl.textContent = formatTime(timeLeft);
+        }, 1000);
+
+        // Lógica da Prova Social (Toast)
+        const buyers = [
+            { name: "Cátia", location: "Rio de Janeiro, RJ" },
+            { name: "Maria Santos", location: "São Paulo, SP" },
+            { name: "Lúcia Ferreira", location: "Belo Horizonte, MG" },
+            { name: "Fátima Souza", location: "Salvador, BA" },
+            { name: "Sueli Oliveira", location: "Curitiba, PR" },
+            { name: "Ana Maria", location: "Porto Alegre, RS" },
+            { name: "Rosana", location: "Recife, PE" },
+            { name: "Cláudia", location: "Campinas, SP" },
+            { name: "Márcia", location: "Niterói, RJ" },
+            { name: "Sandra", location: "Goiânia, GO" },
+            { name: "Regina", location: "Florianópolis, SC" },
+            { name: "Vera Lúcia", location: "Vitória, ES" },
+            { name: "Marta", location: "Fortaleza, CE" },
+            { name: "Sônia", location: "Brasília, DF" }
+        ];
+
+        const delays = [3000, 5000, 8000];
+        const displayDuration = 4000;
+        const toastEl = document.getElementById('social-proof-toast');
+        const buyerNameEl = document.getElementById('buyer-name');
+        const buyerLocationEl = document.getElementById('buyer-location');
+
+        function showToast() {
+            // Seleciona comprador aleatório
+            const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
+            buyerNameEl.textContent = randomBuyer.name;
+            buyerLocationEl.textContent = randomBuyer.location;
+
+            // Mostra o toast
+            toastEl.classList.remove('hidden', 'toast-exit');
+            toastEl.classList.add('toast-enter');
+
+            // Esconde após duração
+            setTimeout(() => {
+                toastEl.classList.remove('toast-enter');
+                toastEl.classList.add('toast-exit');
+                
+                // Realmente esconder após a animação de saída
+                setTimeout(() => {
+                    toastEl.classList.add('hidden');
+                }, 500); // 500ms match css animation
+
+                // Agendar o próximo
+                scheduleNextToast();
+            }, displayDuration);
+        }
+
+        function scheduleNextToast() {
+            const nextDelay = delays[Math.floor(Math.random() * delays.length)];
+            setTimeout(showToast, nextDelay);
+        }
+
+        // Iniciar ciclo de toast
+        scheduleNextToast();
+    </script>
+</body>
 </html>
